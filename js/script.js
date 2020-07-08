@@ -27,6 +27,7 @@ var mailArray = [
 
 var mailMia = prompt("Per accedere inserisci la tua E-mail...");
 var risultato = false;
+var colore;
 
 for (var i = 0; i < mailArray.length; i++) {
   if (mailArray[i] == mailMia) {
@@ -37,10 +38,12 @@ for (var i = 0; i < mailArray.length; i++) {
 
 console.log(risultato);
 
-if (risultato == true) {
+if (risultato) {
   console.log("ok");
-  document.getElementById("risultato").style.background = "green";
+  colore = "green";
 } else {
   console.log("no");
-  document.getElementById("risultato").style.background = "red";
+  colore = "red";
 }
+
+document.getElementById("risultato").style.background = colore;
