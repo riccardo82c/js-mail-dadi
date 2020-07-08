@@ -26,29 +26,12 @@ var mailArray = [
 ];
 
 var mailMia = prompt("Per accedere inserisci la tua E-mail...");
-
-/* for (var i = 0; i < mailArray.length; i++) {
-  // console.log(i);
-  if (mailArray[i] == mailMia) {
-    console.log("Puoi entrare");
-    i = 100;
-    console.log(i);
-  } else if (mailArray[i] != mailMia) {
-    console.log("Non puoi entrare");
-    // } else {
-    //   console.log("fine array");
-  }
-} */
-
 var risultato = false;
 
 for (var i = 0; i < mailArray.length; i++) {
-  // console.log(i);
   if (mailArray[i] == mailMia) {
-    // console.log("Puoi entrare");
     var risultato = true;
     i = mailArray.length;
-    // console.log("Fine array");
   }
 }
 
@@ -56,12 +39,8 @@ console.log(risultato);
 
 if (risultato == true) {
   console.log("ok");
-} else {
-  console.log("no");
-}
-
-if (risultato == true) {
   document.getElementById("risultato").style.background = "green";
 } else {
+  console.log("no");
   document.getElementById("risultato").style.background = "red";
 }
