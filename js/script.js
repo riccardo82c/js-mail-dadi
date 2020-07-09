@@ -49,12 +49,8 @@ fa il punteggio più alto. */
 
 var nomeGiocatore = prompt("Inserisci il nome per lanciare i dadi")
 
-
-
-/* genero random number da 1 a 6 per il dado Utente * 2 dadi*/
-
-
 function lancia() {
+	/* genero random number da 1 a 6 per il dado Utente * 2 dadi*/
 	var dieUser = Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
 	/* genero random number da 1 a 6 per il dado Pc * 2 dadi*/
 	var diePc = Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
@@ -62,19 +58,25 @@ function lancia() {
 	// metto a video le due variabili prese dall'utente
 	document.getElementById("dieUser").innerHTML = `${nomeGiocatore} tirando ha fatto ${dieUser}`;
 	document.getElementById("diePc").innerHTML = `Il PC tirando ha fatto ${diePc}`;
+
 	// inizializzo la variabile risultato (settata su pareggio ovvero terza scelta)
 	var risultato = `${nomeGiocatore} pareggia`;
-	document.getElementById("risultato").style.color = "cornsilk";
+	// inizializzo la var colore (settata su bianco colore del pareggio)
+	colore = "cornsilk"
+
+
 	// if per verificare quale dei due è maggiore
 	if (dieUser > diePc) {
 		risultato = `${nomeGiocatore} vince`;
-		document.getElementById("risultato").style.color = "green";
+		colore = "green"
 	} else if (dieUser < diePc) {
 		risultato = `${nomeGiocatore} perde`;
-		document.getElementById("risultato").style.color = "red";
+		colore = "red"
 	}
+
 	// se nessuno è maggiore la variabile risultato resterà a "Pareggio"
 	// stampa a video del risultato del gioco
 	document.getElementById("risultato").innerHTML = risultato;
+	document.getElementById("risultato").style.color = colore;
 
 }
