@@ -47,10 +47,12 @@
 sia per il computer. Stabilire il vincitore, in base a chi
 fa il punteggio più alto. */
 /* genero random number da 1 a 6 per il dado Utente*/
-var dieUser = Math.floor(Math.random() * 6) + 1;
+var dieUser =
+  Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
 console.log(dieUser);
 /* genero random number da 1 a 6 per il dado Pc*/
-var diePc = Math.floor(Math.random() * 6) + 1;
+var diePc =
+  Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
 console.log(diePc);
 
 var risultato = "Pareggio";
