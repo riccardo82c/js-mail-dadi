@@ -22,7 +22,7 @@ var mailArray = [
   "fallorn@outlook.com",
   "kawasaki@me.com",
   "burns@msn.com",
-  "prova",
+  "prova@gmail.com",
 ];
 
 var mailMia = prompt("Per accedere inserisci la tua E-mail...");
