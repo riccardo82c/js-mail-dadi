@@ -46,23 +46,28 @@
 /* Generare un numero random da 1  a 6, sia per il giocatore
 sia per il computer. Stabilire il vincitore, in base a chi
 fa il punteggio più alto. */
-/* genero random number da 1 a 6 per il dado Utente*/
-var dieUser =
-  Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
-document.getElementById(
-  "dieUser"
-).innerHTML = `L'utente tirando ha fatto ${dieUser}`;
-/* genero random number da 1 a 6 per il dado Pc*/
-var diePc =
-  Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
+
+var nomeGiocatore = prompt("Inserisci il nome per lanciare i dadi")
+
+/* genero random number da 1 a 6 per il dado Utente * 2 dadi*/
+var dieUser = Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
+/* genero random number da 1 a 6 per il dado Pc * 2 dadi*/
+var diePc = Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
+
+// metto a video le due variabili prese dall'utente
+document.getElementById("dieUser").innerHTML = `${nomeGiocatore} tirando ha fatto ${dieUser}`;
 document.getElementById("diePc").innerHTML = `Il PC tirando ha fatto ${diePc}`;
-
-var risultato = "Pareggio";
-
+// inizializzo la variabile risultato (settata su pareggio ovvero terza scelta)
+var risultato = `${nomeGiocatore} pareggia`;
+// if per verificare quale dei due è maggiore
 if (dieUser > diePc) {
-  risultato = "L'utente vince";
+	risultato = `${nomeGiocatore} vince`;
+	document.getElementById("risultato").style.color = "green";
 } else if (dieUser < diePc) {
-  risultato = "Il PC vince";
+	risultato = `${nomeGiocatore} perde`;
+	document.getElementById("risultato").style.color = "red";
 }
+// se nessuno è maggiore la variabile risultato resterà a "Pareggio"
 
+// stampa a video del risultato del gioco
 document.getElementById("risultato").innerHTML = risultato;
