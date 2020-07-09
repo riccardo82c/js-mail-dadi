@@ -14,9 +14,39 @@
   width: 100%;
   display: grid;
   place-content: center;
+  background-color: #333;
+}
+
+.box {
+  font-size: 24px;
+  width: 650px;
+  color: cornsilk;
+  background-color: black;
+  text-align: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 100px 100px;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.hdwallpaper.nu%2Fwp-content%2Fuploads%2F2016%2F12%2Fdice-8.jpg&f=1&nofb=1");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  /* align-items: center; */
 }
 
 #risultato {
-  height: 100px;
-  width: 100px;
+  grid-column: 1 / 3;
+  font-size: 30px;
+  font-weight: 800;
+  border: 3px solid cornsilk;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+
+#dieUser,
+#diePc {
+  line-height: 100px;
+  padding: 0 10px;
+  border: 1px solid cornsilk;
 }

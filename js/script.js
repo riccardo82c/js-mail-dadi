@@ -49,11 +49,13 @@ fa il punteggio più alto. */
 /* genero random number da 1 a 6 per il dado Utente*/
 var dieUser =
   Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
-console.log(dieUser);
+document.getElementById(
+  "dieUser"
+).innerHTML = `L'utente tirando ha fatto ${dieUser}`;
 /* genero random number da 1 a 6 per il dado Pc*/
 var diePc =
   Math.floor(Math.random() * 6) + 1 + (Math.floor(Math.random() * 6) + 1);
-console.log(diePc);
+document.getElementById("diePc").innerHTML = `Il PC tirando ha fatto ${diePc}`;
 
 var risultato = "Pareggio";
 
