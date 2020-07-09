@@ -26,24 +26,15 @@ var mailArray = [
 ];
 
 var mailMia = prompt("Per accedere inserisci la tua E-mail...");
-var risultato = false;
-var colore;
+// var risultato = false;
+var colore = "red";
 
 for (var i = 0; i < mailArray.length; i++) {
   if (mailArray[i] == mailMia) {
-    var risultato = true;
-    i = mailArray.length;
+    var colore = "green";
+    // for serve per ciclare indi meglio non uscire
+    // i = mailArray.length;
   }
-}
-
-console.log(risultato);
-
-if (risultato) {
-  console.log("ok");
-  colore = "green";
-} else {
-  console.log("no");
-  colore = "red";
 }
 
 document.getElementById("risultato").style.background = colore;
